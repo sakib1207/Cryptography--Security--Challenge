@@ -1,0 +1,39 @@
+Cryptography is the study of keeping information hidden. 
+Problems in cryptography generally address how to send information across some channel without other people seeing it? 
+In the old days, this was much easier since you'd have a personal messenger, and as long as this person wasn't 
+intercepted, your message was safe.In simple words Cryptography is a combination of mathematics and security engineering. 
+It offers a great tools which are used in all the modern security protocols. You can say, it is kind of a technology which
+enables the protection of distributed systems, and still it’s one of the thing which is somewhat hard to do it in a right manner.
+It converts your simple Hello to some scrambled text may be some numbers characters, special characters; depends on the logic or
+the mathematics which you have used. It could be as simple as Julius ceaser, algorithm which just replace or swap with the key.
+Confidentiality - Information cannot be understood by anyone
+
+Integrity - Information cannot be altered.
+
+Non-repudiation - Sender cannot deny his/her intentions in the transmission of the information at a later stage
+
+Authentication - Sender and receiver can confirm each
+
+Cryptography is used in many applications like banking transactions cards, computer passwords, and e- commerce transactions.
+
+Three types of cryptographic techniques used in general.
+
+1. Symmetric-key cryptography
+
+2. Hash functions.
+
+3. Public-key cryptography
+
+Symmetric-key Cryptography: Both the sender and receiver share a single key.
+
+The sender uses this key to encrypt plaintext and send the cipher text to the receiver.
+On the other side the receiver applies the same key to decrypt the message and recover the plain text.
+
+Public-Key Cryptography: This is the most revolutionary concept in the last 300-400 years.
+In Public-Key Cryptography two related keys (public and private key) are used.
+Public key may be freely distributed, while its paired private key, remains a secret.
+The public key is used for encryption and for decryption private key is used.
+
+Hash Functions: No key is used in this algorithm.
+A fixed-length hash value is computed as per the plain text that makes it impossible for the contents
+of the plain text to be recovered. Hash functions are also used by many operating systems to encrypt passwords.
