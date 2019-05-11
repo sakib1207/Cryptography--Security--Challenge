@@ -1,6 +1,6 @@
-                     -------------------------------
-                     || VEGENERE CIPHER TEXT MODULE ||
-                     --------------------------------
+                                              -------------------------------
+                                             || VEGENERE CIPHER TEXT MODULE ||
+                                              --------------------------------
 1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26
 A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
 Z	Y	X	W	V	U	T	S	R	Q	P	O	N	M	L	K	J	I	H	G	F	E	D	C	B	A
@@ -31,17 +31,17 @@ W	X	Y	Z	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V
 X	Y	Z	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W
 Y	Z	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X
 Z	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y
-                        _____________________
-                         || ATBASH   CIPHER ||
-                        _____________________
+                                             _____________________
+                                            || ATBASH   CIPHER ||
+                                             _____________________
 1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26
 A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
 Z	Y	X	W	V	U	T	S	R	Q	P	O	N	M	L	K	J	I	H	G	F	E	D	C	B	A
 
 
- --------------------------------------
-||  Transposition Rail Fence Cipher  ||
----------------------------------------
+                                          --------------------------------------
+                                         ||  Transposition Rail Fence Cipher  ||
+                                          ---------------------------------------
 
 Plain Text: "WELCOME TO MY SESSION"
 W L O E O Y E S O
@@ -51,9 +51,9 @@ ____________________
 Cipher Text: WLOEOYESOECMIMSSIN
 
 
-_____________________________
- || Row Transposition Cipher ||
-______________________________
+                                            _____________________________
+                                            || Row Transposition Cipher ||
+                                            ______________________________
 Plain Text: "WELCOME TO MY SESSION"
 KEY:32541(Unique numbers should be considered and from 0 to 9)
 3	2	4	5	1
@@ -378,3 +378,35 @@ D =e^-1 mod ∅
 =7^-1 mod 12=7
 M=4^7 mod 21 =16384 mod 21=4
 
+
+
+
+                                         ---------------------
+                                          || Autokey cipher ||
+					  --------------------
+					 
+1.Create the box bellow.
+0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25
+A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
+
+2.Take a text as primer keyword. That would be constructed by placing the primer at the front of the message.
+3. Now that will the autokey.
+4.For ciphertext, same position letter values should be added and 1 have to minus from the addition and mod with 26. The put the character that value same as the box.
+5.Do the same work again and again until full message is encrypted.
+
+Example:
+Plain Text: HELLO.
+Primer:FRIEND
+Autokey:FRIEN
+Cipher Text: LUSOA
+Explanation:
+HELLO
+|  | | |  | 
+FRIEN
+H+F-1-->7+5-1-->11%26-->11-->L
+E+R-1-->4+17-1-->20%26-->20-->U
+L+I-1-->11+8-1-->18%26-->18-->S
+L+E-1-->11+4-1-->14%26-->14-->O
+O+N-1-->14+13-1-->26%26-->0-->A
+
+					  
